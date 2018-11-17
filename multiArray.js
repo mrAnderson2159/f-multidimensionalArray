@@ -1,6 +1,6 @@
 function multiArray(arraySize, array0Size, array00Size, ...array0nSize) {
 
-  Array.prototype.aFill = function(length) {this.fill(new Array(length))};
+  Array.prototype.aFill = function(length) {for(let i = 0; i<this.length; i++){this[i]=new Array(length)} return this};
   Array.prototype.aForEach = function(length) {this.forEach(x=>x.aFill(length))};
   function efe(length) {return x => x.aForEach(length)}
   function ric(fun) {return x => x.forEach(fun)}
